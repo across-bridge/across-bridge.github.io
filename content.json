@@ -1,0 +1,89 @@
+{
+  "key_facts": {
+    "Category": "Cross-chain bridge",
+    "Network": "Multi-chain",
+    "Token": "ACX",
+    "Primary product": "Across Bridge and Swap API",
+    "Custody": "Non-custodial bridge protocol"
+  },
+  "intent": [
+    {
+      "q": "Across bridge fees & speed",
+      "a": "Across is built around fast cross-chain fills, with its docs describing roughly 2 second mainnet fills across major supported chains. The cost a user sees is route-specific: it can include origin-chain gas, destination execution assumptions, relayer economics, liquidity availability, and the quoted bridge or swap fee. Across does not have one universal fee that applies to every transfer. For users, the best answer is the live quote in the Across app or API because it reflects token, size, chain pair, and route conditions. Across also exposes quote and fee endpoints for integrators who need programmatic estimates before building a transaction."
+    },
+    {
+      "q": "Across supported chains and tokens",
+      "a": "Across supports many chains through its bridge and Swap API, including Ethereum, Arbitrum, Base, Optimism, Polygon, BNB Smart Chain, Linea, Solana, Unichain, World Chain, Ink, Lisk, Mode, Zora, and other deployments shown in its contracts page. Support is not identical for every token or route, so users should verify both the origin chain and destination chain before sending. Stablecoins such as USDC are common Across routes, while other assets depend on chain liquidity and API support. The official chain and token checker tools are the most reliable way to confirm a specific route."
+    },
+    {
+      "q": "How to track an Across bridge transaction",
+      "a": "Across deposits can be tracked by transaction hash, deposit ID, or depositor address through Across tracking tools and API endpoints. A normal route has several stages: the user sends the origin-chain transaction, a relayer fills the destination side, and settlement/refund accounting happens after the protocol verifies the transfer. If a transfer appears delayed, the useful information is the origin transaction hash, origin chain, destination chain, token, amount, and recipient. Across documentation includes tracking endpoints for a single deposit, deposit lifecycle status, and deposits for a given depositor, which is the search intent behind most 'Across bridge pending' queries."
+    },
+    {
+      "q": "Across bridge limits and large transfers",
+      "a": "Across limits are route-dependent rather than a single fixed maximum. Transfer size depends on supported token liquidity, origin and destination chains, current relayer capacity, and parameters returned by the quote or limits endpoints. For large transfers, users should check the live Across quote first and avoid splitting blindly because route economics can change with amount. Integrators can query supported routes and limits before presenting a transaction. If a route is unavailable, it may mean that the chain pair, token, size, or current liquidity state is not supported at that moment."
+    },
+    {
+      "q": "Across Protocol vs Stargate bridge",
+      "a": "Across and Stargate are both cross-chain transfer protocols, but they use different architectures and route assumptions. Across emphasizes fast intents-based fills where relayers deliver funds on the destination chain and later settle through the protocol. Stargate is associated with LayerZero-based omnichain liquidity and native asset transfer designs for supported assets. The better bridge depends on the specific token, chain pair, quoted output, speed, and wallet workflow. A user moving USDC from Arbitrum to Base may see a different winner than a user bridging another asset or using an app that has integrated one protocol's API."
+    }
+  ],
+  "compare": {
+    "title": "Across vs other bridges",
+    "rows": [
+      ["Dimension", "Across", "Alternative"],
+      ["Core model", "Fast relayer-filled cross-chain intents", "Liquidity pools, messaging, or canonical bridges"],
+      ["Typical user check", "Live quote, route, and destination fill", "Bridge fee, finality, and liquidity"],
+      ["Integrations", "Swap API and embedded actions", "Protocol-specific SDKs or bridge UI"],
+      ["Chains", "Broad multi-chain support with active route checks", "Varies by bridge"],
+      ["Best for", "Fast route-dependent transfers", "Token- or ecosystem-specific routes"]
+    ]
+  },
+  "faq": [
+    {
+      "q": "How fast is Across bridge?",
+      "a": "Across documentation describes mainnet fills around 2 seconds for supported routes, but the exact user experience depends on the origin transaction confirmation, token, chain pair, route, and relayer availability. The bridge can feel very fast once the origin transaction is accepted, but users should still wait for the Across app or tracker to show completion before assuming funds are final on the destination chain."
+    },
+    {
+      "q": "What fees does Across charge?",
+      "a": "Across fees are quote-based. A transfer can reflect origin gas, destination execution, route liquidity, relayer economics, and bridge or swap parameters. There is no single fee percentage that accurately describes every Across transfer. Users should compare the output amount shown in the official app, while developers can use Across API endpoints to retrieve quotes, supported routes, and limits before asking a user to sign."
+    },
+    {
+      "q": "Which tokens can I bridge with Across?",
+      "a": "Across supports specific tokens on specific chain routes, with stablecoins such as USDC commonly used across many routes. Support changes by chain, liquidity, and API configuration. The reliable way to answer this query is to check the official Across token checker, app quote, or Swap API for the exact origin chain, destination chain, input token, output token, and transfer amount."
+    },
+    {
+      "q": "What is the ACX token?",
+      "a": "ACX is the token associated with Across Protocol. It is separate from the bridge asset being transferred. A user bridging USDC or ETH through Across does not need to treat ACX as the output token unless they are intentionally buying or interacting with ACX. For token price, contract, and market data, users should rely on established listings such as CoinGecko or CoinMarketCap."
+    },
+    {
+      "q": "Can Across bridge to Solana?",
+      "a": "Across documentation lists Solana among deployed or supported chains, but route availability still depends on the token, origin chain, destination chain, and live API support. Users should not assume every EVM token can move to Solana through Across. Check the official app or API route response for the exact token and amount before sending a transaction."
+    },
+    {
+      "q": "What should I do if an Across bridge is pending?",
+      "a": "First, confirm that the origin-chain transaction succeeded. Then use the Across status tracker with the transaction hash or deposit details. A pending status can relate to origin confirmation, relayer fill timing, route liquidity, or refund/settlement processing. Do not resend the same transaction unless the wallet clearly shows the original transaction failed. Keep the chain pair, token, amount, and recipient address available for support."
+    }
+  ],
+  "niche": {
+    "type": "bridge",
+    "asset": "USDC / ETH / supported tokens",
+    "receive": "Same or routed destination asset",
+    "supported_networks": ["Ethereum", "Arbitrum", "Base", "Optimism", "Polygon", "BNB Smart Chain", "Linea", "Solana", "Unichain", "World Chain", "Ink", "Lisk", "Mode", "Zora"]
+  },
+  "authority": [
+    { "text": "Across documentation", "url": "https://docs.across.to/" },
+    { "text": "Across introduction", "url": "https://docs.across.to/introduction" },
+    { "text": "Across chains and contracts", "url": "https://docs.across.to/chains-and-contracts" },
+    { "text": "Across audits", "url": "https://docs.across.to/introduction/audits" },
+    { "text": "Across GitHub organization", "url": "https://github.com/across-protocol" },
+    { "text": "ACX on CoinGecko", "url": "https://www.coingecko.com/en/coins/across-protocol" },
+    { "text": "Across on DeFiLlama", "url": "https://defillama.com/protocol/across" }
+  ],
+  "sameAs": [
+    "https://x.com/AcrossProtocol",
+    "https://github.com/across-protocol",
+    "https://www.coingecko.com/en/coins/across-protocol",
+    "https://defillama.com/protocol/across"
+  ]
+}
