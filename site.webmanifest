@@ -1,22 +1,18 @@
 {
- "name": "Across",
- "short_name": "Across",
- "start_url": "/",
- "display": "standalone",
- "background_color": "#FFFFFF",
- "theme_color": "#FFFFFF",
- "icons": [
-  {
-   "src": "static/icon-192.png",
-   "sizes": "192x192",
-   "type": "image/png",
-   "purpose": "any maskable"
-  },
-  {
-   "src": "static/icon-512.png",
-   "sizes": "512x512",
-   "type": "image/png",
-   "purpose": "any maskable"
-  }
- ]
+  "name": "Across Bridge",
+  "short_name": "Across Bridge",
+  "description": "Across Bridge moves tokens across Ethereum and major L2s from your own wallet.",
+  "start_url": "https://across-bridge.github.io/",
+  "scope": "https://across-bridge.github.io/",
+  "display": "standalone",
+  "background_color": "#F8F6F4",
+  "theme_color": "#E0457B",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }

